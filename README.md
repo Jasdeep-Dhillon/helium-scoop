@@ -31,3 +31,8 @@ scoop bucket add helium https://github.com/Jasdeep-Dhillon/helium-scoop
 | helium-nightly          | `scoop install helium/helium-nightly`          |
 | helium-portable         | `scoop install helium/helium-portable`         |
 | helium-nightly-portable | `scoop install helium/helium-nightly-portable` |
+
+## Credits
+- [Helium-Chromium](https://github.com/imputnet/helium-chromium)
+- Grayscale Icon made by modifying [Helium Icon](https://github.com/imputnet/helium-chromium/blob/main/resources/branding/app_icon/raw.png) 
+- [Helium-Windows](https://github.com/imputnet/helium-windows)
