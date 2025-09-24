@@ -1,19 +1,19 @@
 {
-    "version": "0.4.5.1",
+    "version": "0.4.7.1",
     "description": "Bullshit-free web browser, based on Chromium. Follows imput's ethics and norms.",
     "homepage": "https://github.com/imputnet/helium-windows",
     "license": "GPL-3.0-only",
     "icon": "https://raw.githubusercontent.com/Jasdeep-Dhillon/helium-scoop/refs/heads/main/helium_grayscale.ico",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/imputnet/helium-windows/releases/download/0.4.5.1/helium_0.4.5.1_x64-installer.exe",
-            "post_install": "& $dir/helium_0.4.5.1_x64-installer.exe",
-            "hash": "6a2734439a218e5d47d77e425057898c3b0cef2188b39e7c2c2539bd96ff5d46"
+            "url": "https://github.com/imputnet/helium-windows/releases/download/0.4.7.1/helium_0.4.7.1_x64-installer.exe",
+            "post_install": "& $dir/helium_0.4.7.1_x64-installer.exe",
+            "hash": "3749a77345dbeb5788d5076f7ecf0c17cbbd968f588c5bbd3290aa6cd54f8474"
         },
         "arm64": {
-            "url": "https://github.com/imputnet/helium-windows/releases/download/0.4.5.1/helium_0.4.5.1_arm64-installer.exe",
-            "post_install": "& $dir/helium_0.4.5.1_arm64-installer.exe",
-            "hash": "5b2f83012f621574e670d9270b7db3edbbc436c967a93f0c310ce7ba0f2cff1b"
+            "url": "https://github.com/imputnet/helium-windows/releases/download/0.4.7.1/helium_0.4.7.1_arm64-installer.exe",
+            "post_install": "& $dir/helium_0.4.7.1_arm64-installer.exe",
+            "hash": "375723687e4cb452276379a7af231a80af23ba44f411ddbb26509638e648a59a"
         }
     },
     "checkver": "github",
