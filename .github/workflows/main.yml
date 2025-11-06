@@ -1,8 +1,11 @@
 name: Update Helium Manifests
-on: 
+on:
   schedule:
     - cron: "* 23 * * *"
-    
+  push:
+    branches:
+      - actions
+
 jobs:
   build:
     runs-on: windows-latest
