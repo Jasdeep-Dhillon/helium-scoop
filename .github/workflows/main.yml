@@ -1,0 +1,12 @@
+name: Run Repository PowerShell Script
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4 
+      - name: Run PowerShell script from file
+        shell: pwsh 
+        run: |
+          .\bin\checkver.ps1 * -u
