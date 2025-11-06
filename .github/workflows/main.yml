@@ -5,8 +5,15 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout repository code
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
+      - name: Install Scoop
+        shell: powershell
+        run: |
+          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+      - name: Verify Scoop installation
+        shell: powershell
+        run: scoop help
       - name: Run PowerShell script from file
-        shell: pwsh 
+        shell: pwsh
         run: |
           .\bin\checkver.ps1 * -u
