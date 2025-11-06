@@ -1,7 +1,7 @@
 name: Update Helium Manifests
 on: 
   schedule:
-    - cron: "* 24 * * *"
+    - cron: "* 23 * * *"
     
 jobs:
   build:
