@@ -9,7 +9,8 @@ jobs:
       - name: Install Scoop
         shell: powershell
         run: |
-          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+          Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
       - name: Verify Scoop installation
         shell: powershell
         run: scoop help
