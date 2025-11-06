@@ -11,10 +11,5 @@ jobs:
         run: |
           Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
           Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-      - name: Verify Scoop installation
-        shell: powershell
-        run: scoop help
-      - name: Run PowerShell script from file
-        shell: pwsh
-        run: |
           .\bin\checkver.ps1 * -u
+  
