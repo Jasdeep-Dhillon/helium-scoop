@@ -1,5 +1,8 @@
-name: Run Repository PowerShell Script
-on: [push]
+name: Update Helium Manifests
+on: 
+  schedule:
+    - cron: "* 24 * * *"
+    
 jobs:
   build:
     runs-on: windows-latest
@@ -9,7 +12,13 @@ jobs:
       - name: Install Scoop
         shell: powershell
         run: |
-          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
           Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+      - name: Update Helium manifest versions
+        shell: powershell
+        run: |
           .\bin\checkver.ps1 * -u
-  
+      - name: Commit & Push Changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
